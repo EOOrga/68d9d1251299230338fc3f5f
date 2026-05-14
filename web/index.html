@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071428">
+  <meta name="description" content="DONATO VALERIE is a local Android operations app for interviews, equipment checkout, shift coverage, and compliance reporting.">
+  <title>DONATO VALERIE</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      --navy: #071428;
+      --ink: #171b22;
+      --gold: #deb966;
+      --bronze: #9e7a35;
+      --green: #1e7668;
+      --paper: #fbfaf6;
+      --line: #ded8c9;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      align-items: center;
+      background: rgba(7, 20, 40, 0.96);
+      color: var(--white);
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      min-height: 68px;
+      padding: 14px clamp(18px, 4vw, 56px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      border-radius: 8px;
+      height: 42px;
+      width: 42px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.93rem;
+      font-weight: 700;
+    }
+
+    .nav a {
+      opacity: 0.86;
+      text-decoration: none;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(7, 20, 40, 0.92), rgba(7, 20, 40, 0.62), rgba(7, 20, 40, 0.2)),
+        url("featured.png") center / cover no-repeat;
+      color: var(--white);
+      min-height: 78vh;
+      padding: clamp(54px, 8vw, 110px) clamp(20px, 6vw, 82px);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 8vw, 6.5rem);
+      letter-spacing: 0;
+      line-height: 0.94;
+      margin: 0;
+    }
+
+    .hero p {
+      color: #f3ead0;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      margin: 22px 0 32px;
+      max-width: 620px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      font-weight: 800;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: #15120a;
+    }
+
+    .button.secondary {
+      border-color: rgba(255, 255, 255, 0.45);
+      color: var(--white);
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 1120px;
+      padding: 40px 20px 64px;
+    }
+
+    .section-heading {
+      align-items: end;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 22px 0 18px;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 4vw, 2.7rem);
+      letter-spacing: 0;
+      line-height: 1.08;
+      margin: 0;
+    }
+
+    .eyebrow {
+      color: var(--bronze);
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .tile {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .tile h3 {
+      font-size: 1.05rem;
+      margin: 0 0 8px;
+    }
+
+    .tile p {
+      margin: 0;
+    }
+
+    .workflow {
+      background: var(--navy);
+      color: var(--white);
+      margin: 46px calc(50% - 50vw) 0;
+      padding: 44px clamp(20px, 6vw, 82px);
+    }
+
+    .workflow-inner {
+      margin: 0 auto;
+      max-width: 1120px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 20px;
+    }
+
+    .step {
+      border: 1px solid rgba(222, 185, 102, 0.45);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .step strong {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      align-items: center;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 42px;
+    }
+
+    .contact p {
+      margin: 6px 0 0;
+      max-width: 620px;
+    }
+
+    @media (max-width: 820px) {
+      .nav {
+        display: none;
+      }
+
+      .grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading,
+      .contact {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .hero {
+        min-height: 72vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="favicon.png" alt="">
+      <span>DONATO VALERIE</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#modules">Modules</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Local Android operations desk</p>
+      <h1>DONATO VALERIE</h1>
+      <p>Plan interviews, track equipment, coordinate shift coverage, and close compliance findings from one focused mobile workspace.</p>
+      <div class="button-row">
+        <a class="button primary" href="#modules">View app modules</a>
+        <a class="button secondary" href="mailto:support@donatovalerie.com">Contact support</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="modules">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Daily operating board</p>
+          <h2>Built for repeated desk work, not one-off notes.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="tile">
+          <h3>Interview scheduling</h3>
+          <p>Save candidate holds, owners, room notes, and confirmation status.</p>
+        </article>
+        <article class="tile">
+          <h3>Equipment checkout</h3>
+          <p>Track assigned assets, return timing, condition, and handoff notes.</p>
+        </article>
+        <article class="tile">
+          <h3>Shift coverage</h3>
+          <p>Record coverage gaps, supervisor owners, and operating windows.</p>
+        </article>
+        <article class="tile">
+          <h3>Compliance reporting</h3>
+          <p>Capture findings, severity, due dates, and closeout progress.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+      <div class="workflow-inner">
+        <p class="eyebrow">How teams use it</p>
+        <h2>Open the app, update the board, close the loop.</h2>
+        <div class="steps">
+          <div class="step">
+            <strong>1. Create records</strong>
+            <span>Add interviews, equipment, shifts, and reports as local work items.</span>
+          </div>
+          <div class="step">
+            <strong>2. Review priorities</strong>
+            <span>Use the overview screen to spot active items before the next handoff.</span>
+          </div>
+          <div class="step">
+            <strong>3. Update status</strong>
+            <span>Open detail screens and mark work confirmed, returned, covered, or closed.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="privacy">
+      <div>
+        <p class="eyebrow">Private by design</p>
+        <h2>Device-local records.</h2>
+        <p>The Android app does not require an account, cloud sync, analytics, advertising identifiers, or external APIs. Operations records remain on the device until app data is cleared or the app is uninstalled.</p>
+      </div>
+      <a class="button primary" href="mailto:support@donatovalerie.com">support@donatovalerie.com</a>
+    </section>
+  </main>
+</body>
+</html>

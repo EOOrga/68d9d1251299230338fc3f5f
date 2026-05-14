@@ -1,0 +1,6 @@
+using $gpc-app-builder  create this app
+app title: DONATO VALERIE
+app idea: An operations-focused app offering interview scheduling, equipment checkout, shift scheduling, and compliance reporting to streamline daily business tasks.
+company name: DONATO VALERIE
+email address: [email to be provided later]
+the two icon and featured graphics contained in docs folder

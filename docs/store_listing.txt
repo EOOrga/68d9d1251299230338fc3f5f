@@ -1,0 +1,13 @@
+App name
+DONATO VALERIE
+
+Short description
+Manage daily interviews, equipment, shifts, and compliance tasks in one local operations workspace.
+
+Full description
+DONATO VALERIE helps business operations teams keep daily work organized without an account or cloud service. Track interview holds, equipment checkouts, shift coverage, and compliance findings from a focused Android app built for repeated desk use.
+
+Create local records, review active priorities, open detail screens, and update status as work moves from planned to complete. The app keeps information on the device so teams can maintain a practical operating board for everyday coordination.
+
+Category
+Business
