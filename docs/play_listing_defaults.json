@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.taziggg100.donatovalerie": {
+      "title": "DONATO VALERIE",
+      "short_description": "Manage daily interviews, equipment, shifts, and compliance tasks in one...",
+      "full_description": "DONATO VALERIE helps business operations teams keep daily work organized without an account or cloud service. Track interview holds, equipment checkouts, shift coverage, and compliance findings from a focused Android app built for repeated desk use.\n\nCreate local records, review active priorities, open detail screens, and update status as work moves from planned to complete. The app keeps information on the device so teams can maintain a practical operating board for everyday coordination.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:28:35.670290+00:00"
+    }
+  }
+}
