@@ -1,4 +1,4 @@
-name: donato_valerie
+name: donatovalerie
 description: "Local operations workflow app for DONATO VALERIE."
 publish_to: 'none'
 
@@ -28,5 +28,5 @@ flutter_launcher_icons:
   android: true
   ios: false
   image_path: "docs/icon.png"
-  adaptive_icon_background: "#071428"
-  adaptive_icon_foreground: "docs/icon.png"
+  adaptive_icon_background: "#FFCB1F"
+  adaptive_icon_foreground: docs/icon.png
