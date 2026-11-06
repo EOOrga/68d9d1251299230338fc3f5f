@@ -20,7 +20,7 @@ class DonatoValerieApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const seed = Color(0xFF9E7A35);
+    const seed = Color(0xFFFF1F39);
     final scheme = ColorScheme.fromSeed(
       seedColor: seed,
       brightness: Brightness.light,
@@ -383,7 +383,7 @@ class OverviewPage extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         SectionTitle(
-          title: 'Priority board',
+          title: 'DONATO VALERIE',
           actionText: '${priorities.length} active',
         ),
         if (priorities.isEmpty)
